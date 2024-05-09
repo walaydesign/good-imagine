@@ -34,6 +34,56 @@ main {
   padding-right: 20px;
 }
 
+.kv {
+  padding-top: 9vw;
+  padding-bottom: 12vw;
+  background-color: #EEE84B;
+  position: relative;
+}
+
+.kv_title {
+  display: block;
+  margin: 0 auto 4vw;
+  width: 61vw;
+}
+
+.kv_subtitle {
+  display: block;
+  margin: 0 auto 3.6vw;
+  width: 38vw;
+}
+
+.kv_reject {
+  display: block;
+  margin: 0 auto;
+  width: 16vw;
+}
+
+.kv_grass {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+@media screen and (max-width: 575px) {
+  .kv {
+    padding-top: 23vw;
+    padding-bottom: 56vw;
+  }
+  .kv_title {
+    width: 86vw;
+    margin-bottom: 7vw;
+  }
+  .kv_subtitle {
+    width: 73vw;
+    margin-bottom: 10vw;
+  }
+  .kv_reject {
+    width: 34vw;
+  }
+}
+
 .slogan {
   padding: 190px 0 295px;
   background-image: url(../img/bg.png);
@@ -213,6 +263,11 @@ main {
   background-repeat: no-repeat;
 }
 
+.intro_item-2 .intro_arrow {
+  left: inherit;
+  right: calc(45% + 20px);
+}
+
 .intro_arrow {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,7 +278,7 @@ main {
   position: absolute;
   left: calc(45% + 20px);
   z-index: 10;
-  bottom: 43%;
+  bottom: 14vw;
 }
 
 .intro_arrow svg {
@@ -416,7 +471,8 @@ main {
     bottom: 36.5vw;
     -webkit-transform: translateY(50%);
             transform: translateY(50%);
-    left: 0;
+    left: 0 !important;
+    right: inherit;
   }
   .intro_arrow svg {
     width: 24px;
@@ -1030,15 +1086,22 @@ main {
 }
 
 .tree {
-  padding-top: 80px;
-  background-image: url(../img/big-tree.png);
+  padding-top: 4vw;
   background-size: 100%;
   background-position: center bottom;
   background-repeat: no-repeat;
+  position: relative;
+}
+
+.tree_bg {
+  width: 100%;
 }
 
 .tree_text {
   width: 45%;
+  position: absolute;
+  top: 10vw;
+  left: 3%;
 }
 
 .tree_text_inner {
@@ -1083,9 +1146,16 @@ main {
   .tree > .container {
     max-width: inherit;
   }
+  .tree_text {
+    top: 5vw;
+    left: 0;
+  }
 }
 
 @media screen and (max-width: 1199px) {
+  .tree_text {
+    position: static;
+  }
   .tree_text_inner h2 {
     font-size: 40px;
   }

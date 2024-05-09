@@ -33,6 +33,49 @@ main {
     padding-right: 20px;
 }
 
+.kv {
+    padding-top: 9vw;
+    padding-bottom: 12vw;
+    background-color: $primary-500;
+    position: relative;
+    &_title {
+        display: block;
+        margin: 0 auto 4vw;
+        width: 61vw;
+    }
+    &_subtitle {
+        display: block;
+        margin: 0 auto 3.6vw;
+        width: 38vw;
+    }
+    &_reject {
+        display: block;
+        margin: 0 auto;
+        width: 16vw;
+    }
+    &_grass {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+    }
+    @media screen and (max-width: 575px) {
+        padding-top: 23vw;
+        padding-bottom: 56vw;
+        &_title {
+            width: 86vw;
+            margin-bottom: 7vw;
+        }
+        &_subtitle {
+            width: 73vw;
+            margin-bottom: 10vw;
+        }
+        &_reject {
+            width: 34vw;
+        }
+    }
+}
+
 .slogan {
     padding: 190px 0 295px;
     background-image: url(../img/bg.png);
@@ -182,6 +225,10 @@ main {
             background-size: 68%;
             background-position: 8% 10%;
             background-repeat: no-repeat;
+            .intro_arrow {
+                left: inherit;
+                right: calc(45% + 20px);
+            }
         }
     }
     &_arrow {
@@ -190,7 +237,8 @@ main {
         position: absolute;
         left: calc(45% + 20px);
         z-index: 10;
-        bottom: 43%;
+        // bottom: 43%;
+        bottom: 14vw;
         svg {
             width: 20px;
             height: 20px;
@@ -358,7 +406,8 @@ main {
             padding: 0 20px;
             bottom: 36.5vw;
             transform: translateY(50%);
-            left: 0;
+            left: 0 !important;
+            right: inherit;
             svg {
                 width: 24px;
                 height: 24px;
@@ -917,13 +966,20 @@ main {
 }
 
 .tree {
-    padding-top: 80px;
-    background-image: url(../img/big-tree.png);
+    padding-top: 4vw;
+    // background-image: url(../img/big-tree.png);
     background-size: 100%;
     background-position: center bottom;
     background-repeat: no-repeat;
+    position: relative;
+    &_bg {
+        width: 100%;
+    }
     &_text {
         width: 45%;
+        position: absolute;
+        top: 10vw;
+        left: 3%;
         &_inner {
             width: fit-content;
             margin: 0 auto;
@@ -959,9 +1015,14 @@ main {
         >.container {
             max-width: inherit;
         }
+        &_text {
+            top: 5vw;
+            left: 0;
+        }
     }
     @media screen and (max-width: 1199px) {
         &_text {
+            position: static;
             &_inner {
                 h2 {
                     font-size: 40px;
@@ -1304,7 +1365,6 @@ main {
         }
     }
 }
-
 
 .sideBtn {
     position: fixed;
