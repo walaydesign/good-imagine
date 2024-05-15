@@ -113,6 +113,7 @@ main {
         width: 34%;
         right: 0;
         bottom: -5%;
+        z-index: 5;
     }
     @media screen and (max-width: 991px) {
         h2 {
@@ -178,10 +179,13 @@ main {
         }
     }
     &_pic {
+        display: block;
+        margin: 0 auto;
         &-wrap {
-            display: flex;
+            // display: flex;
             justify-content: center;
             overflow-x: auto;
+            position: relative;
         }
     }
     &_finger {
@@ -193,7 +197,16 @@ main {
     }
     @media screen and (max-width: 991px) {
         &_pic {
+            &-wrap {
+                height: 607px;
+            }
             min-width: 1000px;
+            position: absolute;
+            left: calc((1000px - 100vw) / (-2));
+            top: 0;
+            left: 0;
+            // transform: translateX(-50%);
+            // transform: translateX(-50%);
         }
     }
     @media screen and (max-width: 767px) {
@@ -310,6 +323,7 @@ main {
             color: #158379;
             position: relative;
             font-size: 48px;
+            letter-spacing: 0.05em;
             font-weight: 600;
             width: fit-content;
             margin: 0;
@@ -329,9 +343,10 @@ main {
             margin-top: 20px;
             margin-bottom: 0;
             line-height: 1.6;
+            letter-spacing: 0.03em;
         }
         &-1 {
-            top: 5%;
+            top: 12%;
             left: 50%;
         }
         &-2 {
@@ -541,14 +556,18 @@ main {
             h2 {
                 font-size: 48px;
                 font-weight: 600;
-                margin-bottom: 10px;
+                margin-bottom: 15px;
                 color: #069081;
+                letter-spacing: 0.05em;
+                line-height: 1.4;
             }
             h3 {
                 font-size: 36px;
                 font-weight: 600;
-                margin-bottom: 15px;
+                margin-bottom: 20px;
                 color: #6557B2;
+                line-height: 1.4;
+                letter-spacing: 0.05em;
             }
             h4 {
                 font-size: 28px;
@@ -560,7 +579,7 @@ main {
                 &::after {
                     position: absolute;
                     content: "";
-                    width: 140px;
+                    width: 175px;
                     height: 1px;
                     background-color: #6D6D6D;
                     top: 50%;
@@ -625,17 +644,40 @@ main {
         left: 2%;
         top: 6%;
     }
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1600px) {
         &_text {
             &_inner {
                 h2 {
                     font-size: 40px;
                 }
                 h3 {
-                    font-size: 32px;
+                    font-size: 30px;
                 }
                 h4 {
-                    font-size: 22px;
+                    font-size: 24px;
+                    &::after {
+                        width: 135px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        &_text {
+            &_inner {
+                h2 {
+                    font-size: 32px;
+                    margin-bottom: 10px;
+                }
+                h3 {
+                    font-size: 24px;
+                    margin-bottom: 15px;
+                }
+                h4 {
+                    font-size: 20px;
+                    &::after {
+                        width: 97px;
+                    }
                 }
             }
         }
@@ -703,7 +745,7 @@ main {
                 font-size: 16px;
                 &::after {
                     left: calc(100% + 15px);
-                    width: 70px;
+                    width: 92px;
                 }
             }
         }
@@ -881,13 +923,16 @@ main {
             font-size: 48px;
             font-weight: 600;
             color: #158379;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            // letter-spacing: 0.05em;
+            line-height: 1.4;
         }
         h3 {
             font-size: 32px;
             font-weight: 600;
             color: #4F6547;
             margin-bottom: 55px;
+            line-height: 1.4;
         }
     }
     &_write {
@@ -930,7 +975,9 @@ main {
             width: 100%;
         }
         &_pic {
-            width: 100%;
+            width: 90%;
+            display: block;
+            margin: 0 auto;
         }
         &_write {
             transform: none;
@@ -1005,6 +1052,8 @@ main {
                 font-weight: 600;
                 color: #004E42;
                 margin-bottom: 45px;
+                line-height: 1.4;
+                letter-spacing: 0.03em;
             }
         }
     }
@@ -1023,6 +1072,8 @@ main {
     @media screen and (max-width: 1199px) {
         &_text {
             position: static;
+            margin-left: auto;
+            margin-right: auto;
             &_inner {
                 h2 {
                     font-size: 40px;
@@ -1040,6 +1091,9 @@ main {
         }
         &_pic {
             width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
         }
     }
     @media screen and (max-width: 991px) {
@@ -1130,7 +1184,8 @@ main {
         &_inner {
             position: relative;
             width: 100%;
-            justify-content: space-between;
+            // justify-content: space-between;
+            justify-content: center;
             &::after {
                 position: absolute;
                 content: "";
@@ -1197,10 +1252,15 @@ main {
     @media screen and (max-width: 1300px) {
         &_line {
             &_inner {
-                justify-content: flex-start;
+                // justify-content: flex-end;
+                // display: block !important;
+                // display: block !important;
+                width: 1300px;
             }
             &_item {
                 position: relative;
+                // display: inline;
+                // display: inline-flex;
                 &::after {
                     position: absolute;
                     content: "";

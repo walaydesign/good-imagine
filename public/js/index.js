@@ -66,6 +66,35 @@ $(".btn-contact").click(function() {
     $("html, body").animate({scrollTop: contact},300);
 })
 
+function scenaryResize() {
+    if($(window).width() <= 1000) {
+        let scenary = $(".scenary_pic").width();
+        let windowWidth = $(window).width();
+        let scrollLeft = (scenary - windowWidth) / 2;
+        $(".scenary_pic-wrap").animate({ scrollLeft: scrollLeft });
+        // console.log(scrollLeft);
+    }
+}
+$(window).on("resize",function(){
+    scenaryResize();
+})
+scenaryResize();
+
+
+function historyResize() {
+    if($(window).width() <= 1300) {
+        let historyWidth = $(".history_line_inner").width();
+        let windowWidth = $(window).width();
+        let scrollLeft = historyWidth - windowWidth;
+        $(".history_line").animate({ scrollLeft: historyWidth });
+    }
+}
+$(window).on("resize",function(){
+    historyResize();
+})
+historyResize();
+
+
 function sendEmail(){
     Email.send({
         SecureToken: "8207c7d7-4a6c-4797-870d-d16ee71023ce",

@@ -129,6 +129,7 @@ main {
   width: 34%;
   right: 0;
   bottom: -5%;
+  z-index: 5;
 }
 
 @media screen and (max-width: 991px) {
@@ -200,14 +201,17 @@ main {
   margin-bottom: 0;
 }
 
+.scenary_pic {
+  display: block;
+  margin: 0 auto;
+}
+
 .scenary_pic-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   overflow-x: auto;
+  position: relative;
 }
 
 .scenary_finger {
@@ -222,6 +226,13 @@ main {
 @media screen and (max-width: 991px) {
   .scenary_pic {
     min-width: 1000px;
+    position: absolute;
+    left: calc((1000px - 100vw) / (-2));
+    top: 0;
+    left: 0;
+  }
+  .scenary_pic-wrap {
+    height: 607px;
   }
 }
 
@@ -361,6 +372,7 @@ main {
   color: #158379;
   position: relative;
   font-size: 48px;
+  letter-spacing: 0.05em;
   font-weight: 600;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -384,10 +396,11 @@ main {
   margin-top: 20px;
   margin-bottom: 0;
   line-height: 1.6;
+  letter-spacing: 0.03em;
 }
 
 .intro_text-1 {
-  top: 5%;
+  top: 12%;
   left: 50%;
 }
 
@@ -616,15 +629,19 @@ main {
 .commonspace_text_inner h2 {
   font-size: 48px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   color: #069081;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
 }
 
 .commonspace_text_inner h3 {
   font-size: 36px;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   color: #6557B2;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
 }
 
 .commonspace_text_inner h4 {
@@ -641,7 +658,7 @@ main {
 .commonspace_text_inner h4::after {
   position: absolute;
   content: "";
-  width: 140px;
+  width: 175px;
   height: 1px;
   background-color: #6D6D6D;
   top: 50%;
@@ -716,15 +733,35 @@ main {
   top: 6%;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1600px) {
   .commonspace_text_inner h2 {
     font-size: 40px;
   }
   .commonspace_text_inner h3 {
-    font-size: 32px;
+    font-size: 30px;
   }
   .commonspace_text_inner h4 {
-    font-size: 22px;
+    font-size: 24px;
+  }
+  .commonspace_text_inner h4::after {
+    width: 135px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .commonspace_text_inner h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .commonspace_text_inner h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+  .commonspace_text_inner h4 {
+    font-size: 20px;
+  }
+  .commonspace_text_inner h4::after {
+    width: 97px;
   }
 }
 
@@ -793,7 +830,7 @@ main {
   }
   .commonspace_text h4::after {
     left: calc(100% + 15px);
-    width: 70px;
+    width: 92px;
   }
 }
 
@@ -991,7 +1028,8 @@ main {
   font-size: 48px;
   font-weight: 600;
   color: #158379;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+  line-height: 1.4;
 }
 
 .brand_text h3 {
@@ -999,6 +1037,7 @@ main {
   font-weight: 600;
   color: #4F6547;
   margin-bottom: 55px;
+  line-height: 1.4;
 }
 
 .brand_write {
@@ -1047,7 +1086,9 @@ main {
     width: 100%;
   }
   .brand_pic {
-    width: 100%;
+    width: 90%;
+    display: block;
+    margin: 0 auto;
   }
   .brand_write {
     -webkit-transform: none;
@@ -1136,6 +1177,8 @@ main {
   font-weight: 600;
   color: #004E42;
   margin-bottom: 45px;
+  line-height: 1.4;
+  letter-spacing: 0.03em;
 }
 
 .tree_pic {
@@ -1155,6 +1198,8 @@ main {
 @media screen and (max-width: 1199px) {
   .tree_text {
     position: static;
+    margin-left: auto;
+    margin-right: auto;
   }
   .tree_text_inner h2 {
     font-size: 40px;
@@ -1170,6 +1215,9 @@ main {
   }
   .tree_pic {
     width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
   }
 }
 
@@ -1268,9 +1316,9 @@ main {
 .history_line_inner {
   position: relative;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .history_line_inner::after {
@@ -1355,9 +1403,7 @@ main {
 
 @media screen and (max-width: 1300px) {
   .history_line_inner {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    width: 1300px;
   }
   .history_line_item {
     position: relative;
