@@ -845,12 +845,12 @@ main {
 
 .layout_text {
   width: 42%;
-  padding-left: 100px;
+  padding-left: 50px;
   padding-bottom: 50px;
 }
 
 .layout_text h2 {
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 600;
   color: #6557B2;
   margin-bottom: 15px;
