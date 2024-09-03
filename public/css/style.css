@@ -86,7 +86,7 @@ main {
 
 .slogan {
   padding: 190px 0 295px;
-  background-image: url(../img/bg.png);
+  background-image: url(../img/bg.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -249,7 +249,7 @@ main {
 }
 
 .intro {
-  background-image: url(../img/bg2.png);
+  background-image: url(../img/bg2.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -607,7 +607,7 @@ main {
 
 .commonspace {
   padding: 70px 0 90px;
-  background-image: url(../img/bg3.png);
+  background-image: url(../img/bg3.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -836,7 +836,7 @@ main {
 
 .layout {
   padding: 40px 0 65px;
-  background-image: url(../img/bg4.png);
+  background-image: url(../img/bg4.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1011,7 +1011,7 @@ main {
 }
 
 .brand {
-  background-image: url(../img/bg6.png);
+  background-image: url(../img/bg6.webp);
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -1120,7 +1120,7 @@ main {
 }
 
 .th {
-  background-image: url(../img/bg7.png);
+  background-image: url(../img/bg7.webp);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
